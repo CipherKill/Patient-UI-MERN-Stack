@@ -1,0 +1,37 @@
+.button-nav-div{
+    display:flex;
+    justify-content:center;
+}
+
+.button-nav-container{
+    text-align:center;
+    background-color:rgba(0,0,0,0.5);
+    border-radius:2rem;
+    padding:0.6rem 0;
+    position:fixed;
+    bottom:2rem;
+}
+
+.button-nav-container .buttons{
+    text-decoration:none;
+    border:2px solid whitesmoke;
+    padding:0 1rem;
+    color:whitesmoke;
+    font-size:2rem;
+    margin:0 1rem;
+    border-radius:2rem;
+    transition:0.2s;
+}
+
+.button-nav-container .buttons:hover,
+.button-nav-container .buttons:focus{
+    background-color:whitesmoke;
+    color:black;
+    border-color:black;
+}
+
+@media screen and (max-width:992px){
+    .button-nav-container{
+        display:none;
+    }
+}

@@ -1,0 +1,9 @@
+.loading-container{
+    /* background-color: red; */
+    height:30%;
+}
+
+.loading-container img{
+    display:block;
+    margin:50% auto;
+}

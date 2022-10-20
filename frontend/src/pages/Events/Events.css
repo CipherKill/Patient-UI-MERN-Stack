@@ -1,0 +1,49 @@
+.event-container{
+    margin-top:3rem;
+    border-radius:10px;
+    padding:1.5rem;;
+    background-color:rgba(0,0,0,0.3);
+    color:white;
+    padding-bottom:5rem;
+}
+
+.form-container{
+    position:relative;
+}
+
+.event-container .textbox-style{
+    background-color:rgba(0,0,0,0);
+    border:2px solid whitesmoke;
+}
+
+.event-container .textbox-style:focus{
+    background-color:rgba(255,255,255,0.6);
+}
+
+.event-container .button{
+    text-transform:uppercase;
+    font-size:1.3rem;
+    font-weight:700;
+    border:2px solid whitesmoke;
+    margin-top:1rem;
+    width:10rem;
+}
+
+.event-container .clear-btn{
+    position:absolute;
+    left:0;
+}
+.event-container .clear-btn:hover{
+    background-color:rgba(0,0,0,0.3);
+}
+
+.submit-btn{
+    position:absolute;
+    right:0;
+}
+
+@media screen and (min-width:992px){
+    .event-container{
+        width:30%;
+    }
+}

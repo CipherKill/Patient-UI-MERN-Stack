@@ -1,0 +1,35 @@
+.about-area{
+    background-color:rgba(0,0,0,0.4);
+    color:whitesmoke;
+    border-radius:1rem;
+    margin-top:1rem;
+    font-size:20px;
+    padding:2rem;
+}
+
+.about-area .caption{
+    margin-top:-0.5rem;
+    color:rgb(210, 210, 210);
+    font-size:15px;
+}
+
+.bottom-navbar{
+    display:block;
+}
+
+.bottom-nav-buttons{
+    display:none;
+}
+
+@media screen and (min-width:992px){
+    .about-area{
+        width:50%;
+        margin-top:5rem;
+    }
+    .bottom-navbar{
+        display:none;
+    }
+    .bottom-nav-buttons{
+        display:block
+    }
+}

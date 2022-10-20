@@ -1,0 +1,132 @@
+.navbar-background{
+    background-color:rgba(0,0,0,0.2);
+    height:3rem;
+}
+
+.brand-name{
+    color:white;
+    font-size:2rem;
+    font-weight:700;
+    text-decoration: none;
+}
+
+.brand-name:hover{
+    color:whitesmoke;
+}
+
+.page-title{
+    color:whitesmoke;
+    text-transform: uppercase;
+    font-size:1.3rem;
+    margin:auto 2rem auto 1rem;
+    font-weight:700;
+}
+
+.nav-overlay{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:10;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.8);
+    overflow-x:hidden;
+    transition:0.5s;
+    margin-top:-1.3rem;
+}
+
+.overlay-content{
+    position:relative;
+    top:15%;
+    width:100%;
+    text-align:center;
+    margin-top:0rem;
+}
+
+/* may need change for below classes*/
+.nav-overlay .links{
+    padding:1rem;
+    text-decoration:none;
+    font-size:26px;
+    color:whitesmoke;
+    display:block;
+    transition:0.3s;
+    margin:2rem auto;
+    border:2px solid whitesmoke;
+    width:90%;
+}
+
+.nav-overlay .backhome-link{
+    text-decoration:none;
+    font-size:25px;
+    color:whitesmoke;
+    display:block;
+    transition:0.3s;
+    border:2px solid rgba(255,255,255,0.2);
+    width:31%;
+    padding:0.2rem 0.5rem 0.2rem 0;
+    margin-left:1.3rem;
+}
+
+.nav-overlay .link-hover:hover,
+.nav-overlay .link-hover:focus,
+.nav-overlay .link-hover:hover{
+    color:cyan;
+    border-color:cyan;
+}
+
+.nav-overlay,
+.closebtn{
+    position:absolute;
+    top:20px;
+    right:45px;
+    font-size:60px;
+}
+
+.closebtn{
+    display:block;
+    cursor:pointer;
+    color:whitesmoke;
+    transition:0.3s;
+    font-size:2rem;
+    margin-right:-2rem;
+}
+
+.opacity-control{
+    opacity:0;
+}
+
+@media screen and (max-height:450px){
+    .nav-overlay p{font-size:20px;}
+    .nav-overlay .closebtn{
+        font-size:40px;
+        top:15px;
+        right:35px;
+    }
+}
+
+.hamburger-menu{
+    color:white;
+    font-size:2rem;
+    margin-top:-0.4rem;
+    cursor:pointer;
+}
+
+@media screen and (min-width:992px){
+    .hamburger-menu{
+        display:none;
+    }
+    .brand-name{
+        font-size:4rem;
+        color:rgba(0,0,0,0.3);
+    }   
+    .navbar-background{
+        height:5rem;
+        background-color:rgba(0,0,0,0.0);
+    }
+    .page-title{
+        background-color:rgba(0,0,0,0.3);
+        padding:1rem;
+        border-radius:10rem;
+    }
+}

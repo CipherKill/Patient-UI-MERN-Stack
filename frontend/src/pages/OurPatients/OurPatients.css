@@ -1,0 +1,19 @@
+.home-image{
+    background-image: url('../../../public/images/doctor-stethoscope.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:13rem;
+    /* margin-top:1rem; */
+}
+
+/* for pc type screens */
+@media screen and (min-width:992px){
+    .home-image{
+        height:40rem;
+    }
+    .paging-background-container{
+        border-radius:1rem;
+    }
+
+}

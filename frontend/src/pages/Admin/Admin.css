@@ -1,0 +1,26 @@
+.adjust-height{
+    height:90%;
+}
+
+.admin-form{
+    background-color:rgba(255, 68, 0, 0.559);
+    color:black;
+    padding:5rem 1rem;
+    border-radius:10px;
+}
+
+.admin-form .text-box{
+    border-radius:10px;
+}
+
+.admin-form .insert-button{
+    margin:1rem auto;
+    display:block;
+}
+
+@media screen and (min-width:992px){
+    .admin-container{
+        width:30%;
+        text-align:center;
+    }
+}

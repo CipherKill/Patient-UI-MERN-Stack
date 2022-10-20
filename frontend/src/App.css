@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=Open+Sans');
+
+
+
+.primary-background{
+  background-image:url('../public/images/background-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  height:100vh;
+  font-family:"open sans";
+}

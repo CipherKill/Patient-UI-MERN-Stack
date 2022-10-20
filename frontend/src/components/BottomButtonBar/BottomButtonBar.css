@@ -1,0 +1,23 @@
+.bottom-button-bar{
+    padding-top:2rem;
+    border-top:2px solid rgba(0, 0, 0, 0.38);
+}
+
+.bottom-button-bar .buttons{
+    text-decoration:none;
+    color:white;
+    margin:0 1rem;
+    border:2px solid whitesmoke;
+    padding:0.5rem 1rem;
+    border-radius:0.5rem;;
+    transition:0.2s;
+}
+
+.bottom-button-bar .buttons:hover{
+    background-color:rgba(0,0,0,0.5);
+}
+
+.bottom-button-bar .marked{
+    background-color:rgba(0,0,0,0.6);
+    color:whitesmoke;
+}
