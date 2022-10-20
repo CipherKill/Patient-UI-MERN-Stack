@@ -35,9 +35,9 @@ function App() {
               <Route path='/ourpatients/edit/:id' element={<PrivateRoute/>}>
                 <Route path='/ourpatients/edit/:id' element={<EditPatient/>}/>
               </Route>
-              {/* <Route path='/addpatients' element={<PrivateRoute/>}> */}
+              <Route path='/addpatients' element={<PrivateRoute/>}>
                 <Route path='/addpatients' element={<AddPatients/>}/>
-              {/* </Route> */}
+              </Route>
           </Routes>
           <ButtonNav/>
         </div>
@@ -52,4 +52,4 @@ export default App;
 
 
 //error handling if possible
-//use sessions to check if admin is still using
+//change the favicon if possible

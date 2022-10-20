@@ -2,18 +2,20 @@ import axios from 'axios'
 
 const API_URL='http://localhost:3001/api/patients'
 
-const getPatientDetails=async (patientId)=>{
-    const response=await axios.get(`${API_URL}/${patientId}`);
+const generateHeader=(token)=>({headers:{Authorization:`Bearer ${token}`}});
+
+const getPatientDetails=async (patientId,token)=>{
+    const response=await axios.get(`${API_URL}/${patientId}`,generateHeader(token));
     return response.data[0];
 }
 
-const updatePatient=async (data)=>{
-    const response=await axios.put(`${API_URL}/${data.patientId}`,data);
+const updatePatient=async (data,token)=>{
+    const response=await axios.put(`${API_URL}/${data.patientId}`,data,generateHeader(token));
     return response;
 }
 
-const deletePatient=async (patientId)=>{
-    const response=await axios.delete(`${API_URL}/${patientId}`);
+const deletePatient=async (patientId,token)=>{
+    const response=await axios.delete(`${API_URL}/${patientId}`,generateHeader(token));
     return response;
 }
 

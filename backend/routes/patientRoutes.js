@@ -3,6 +3,9 @@
 const express=require('express');
 const router=express.Router();
 
+//admin security middleware
+const {protect}=require('../middlewares/authMiddleware');
+
 //CORS setup
 //corsConfig_master -> For route /
 //corsConfig_query -> For route  /:id
@@ -33,13 +36,13 @@ const {
 //Check if the use of OPTIONS is right or wrong
 router.route('/').options(cors(corsConfig_master)) //For OPTIONS (pre-flight request)
     .get(getAllPatients)
-    .post(createPatient)
+    .post(protect,createPatient)
     .put(updatePatient)
     .delete(deletePatient)
 
 router.route('/:id').options(cors(corsConfig_query)) //For OPTIONS (pre-flight request)
-    .get(getPatientById)
-    .put(updatePatientById)
-    .delete(deletePatientById)
+    .get(protect,getPatientById)
+    .put(protect,updatePatientById)
+    .delete(protect,deletePatientById)
 
 module.exports=router;

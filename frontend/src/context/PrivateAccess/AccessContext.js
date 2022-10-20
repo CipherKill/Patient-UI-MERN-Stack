@@ -1,34 +1,30 @@
 
-import {createContext,useState} from 'react'
+import {createContext} from 'react'
 import axios from 'axios'
 
 const AccessContext=createContext();
 
 export const AccessProvider=({children})=>{
-    const [grantAccess,setGrantAccess]=useState(false);
-    const API_URL='http://localhost:3001/api/admin/checkpassword';
+    const API_URL='http://localhost:3001/api/admin/login';
 
-    const checkKeyValid=async (key)=>{
-        try{
-            let result=await axios.post(API_URL,{key});
-            if(result.data===1){
-                setGrantAccess(true);
-                return true;
-            }
-            else{
-                setGrantAccess(false);
-            }
-            return false;
-        }
-        catch(err){
-            setGrantAccess(false);
-        }
+    const doLogin=async (data)=>{
+        const result=await axios.post(API_URL,data);
+        sendToLocalStorage('token',result.data.token);
+        if(result) return true;
+        else return false;
     }
+
+    const sendToLocalStorage=(label,data)=>localStorage.setItem(label, data);
+
+    const getFromLocalStorage=(label)=>localStorage.getItem(label);
+
+    const deleteStorage=()=>localStorage.clear();
 
     return <AccessContext.Provider value={
         {
-            checkKeyValid,
-            grantAccess
+            doLogin,
+            getFromLocalStorage,
+            deleteStorage
         }
     }>{children}</AccessContext.Provider>
 };

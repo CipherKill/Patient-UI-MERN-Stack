@@ -14,9 +14,10 @@ import {BiArrowBack} from 'react-icons/bi'
 function EditPatient() {
 
     const {changePageNameTo}=useContext(NavContext);
-    const {grantAccess}=useContext(AccessContext);
+    const {getFromLocalStorage}=useContext(AccessContext);
     const navigate=useNavigate();
     const PAGE_NAME='Edit patient';
+    const [grantAccess,setGrantAccess]=useState(false)
 
     const {id}=useParams();
     const [showHome,setShowHome]=useState(false);
@@ -28,8 +29,11 @@ function EditPatient() {
 
     useEffect(()=>{
         changePageNameTo(PAGE_NAME);
-        controller.getPatientDetails(id).then(data=>{setFormData(data)})
-    },[changePageNameTo,id]);
+        controller.getPatientDetails(id,getFromLocalStorage('token')).then(data=>{
+            setFormData(data);
+            setGrantAccess(true);
+        })
+    },[changePageNameTo,id,getFromLocalStorage]);
     
     const handleChange=(e)=>{
         setFormData((prevData)=>(
@@ -54,10 +58,11 @@ function EditPatient() {
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(controller.checkInputs(formData.name,formData.desc)&&grantAccess){
-            controller.updatePatient(formData)
+            controller.updatePatient(formData,getFromLocalStorage('token'))
                 .then(response=>{
                     toast.success('Updated Successfully!',{position:toast.POSITION.BOTTOM_RIGHT});
                     setShowHome(true);
+                    setTimeout(()=>navigate('/'),5000);//may need to remove this
                 })
                 .catch(err=>{
                     toast.error('Error Updating!',{position:toast.POSITION.BOTTOM_RIGHT});
@@ -70,7 +75,7 @@ function EditPatient() {
 
     const handleDelete=()=>{
         if(window.confirm('Are you sure you want to delete this patient?')){
-            controller.deletePatient(id)
+            controller.deletePatient(id,getFromLocalStorage('token'))
                 .then(result=>{
                     toast.success('Deleted Patient!',{position:toast.POSITION.BOTTOM_RIGHT})
                     navigate('/');

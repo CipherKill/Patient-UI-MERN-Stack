@@ -4,10 +4,9 @@ import {useContext} from 'react'
 import {toast} from 'react-toastify'
 
 function PrivateRoute(){
-    const {grantAccess}=useContext(AccessContext);
-    const authState=grantAccess;
+    const {getFromLocalStorage}=useContext(AccessContext);
 
-    if(authState===true){
+    if(getFromLocalStorage('token')){
         return <Outlet/>
     }
     else{

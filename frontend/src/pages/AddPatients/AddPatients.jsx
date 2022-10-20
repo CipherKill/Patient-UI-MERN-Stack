@@ -12,7 +12,7 @@ import AccessContext from '../../context/PrivateAccess/AccessContext'
 function EditPatient() {
 
     const {changePageNameTo}=useContext(NavContext);
-    // const {grantAccess}=useContext(AccessContext);
+    const {getFromLocalStorage}=useContext(AccessContext);
     const grantAccess=true;
     const navigate=useNavigate();
     const PAGE_NAME='add patient';
@@ -48,7 +48,7 @@ function EditPatient() {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        controller.addPatient(formData)
+        controller.addPatient(formData,getFromLocalStorage('token'))
             .then(result=>{
                 toast.success('Added patient!');
                 navigate('/');
