@@ -53,3 +53,5 @@ export default App;
 
 //error handling if possible
 //change the favicon if possible
+//need to make the padination arrows align properly
+//admin logout button goes to left in mobile mode
