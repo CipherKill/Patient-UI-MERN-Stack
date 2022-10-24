@@ -13,10 +13,6 @@ const PORT=process.env.PORT||3001;
 
 //check if teh main api point is working
 app.get('/',(req,res)=>res.status(200).json({status:"Working"}));
-// app.get('/',(req,res)=>{
-//     console.log(req.headers)
-//     res.send('okk');
-// })
 
 app.use('/api/patients',require('./routes/patientRoutes'));
 app.use('/api/patients/paging',require('./routes/pagingRoutes'));
@@ -28,11 +24,4 @@ app.use(require('./middlewares/errorMiddleware')); //common error handler
 //check if success in db and then listen for connections
 connectDB().then(()=>app.listen(PORT,()=>console.log(`listening at port ${PORT}...`)));
 
-
-
-//TODO or check
-//etag realted querys to figure out <>
-//Check if OPTIONS request method is configured the right way
-//Do that thing about matching e-tag (might have to use the stoackoverflow method to check 304 stust codes)
-//Confirm the method used for PUT and DELETE is correct or not, for case 1
 
