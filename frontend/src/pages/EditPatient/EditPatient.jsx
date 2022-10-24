@@ -33,6 +33,7 @@ function EditPatient() {
             setFormData(data);
             setGrantAccess(true);
         })
+        .catch(err=>toast.warning('Something went wrong',{position:toast.POSITION.BOTTOM_RIGHT}));
     },[changePageNameTo,id,getFromLocalStorage]);
     
     const handleChange=(e)=>{

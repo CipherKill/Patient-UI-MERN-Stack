@@ -67,7 +67,7 @@ function Admin() {
                     <input type='password' maxLength={10} className='text-box' name='password' value={formData.password} onChange={handleChange}/>
                 </div>
                 <input type='submit' value='Insert Key' className='insert-button'/>
-                <button className='' onClick={removeAccess}>Remove Access</button>
+                <button className='logout-btn' onClick={removeAccess}>Remove Access</button>
             </form>
         </div>
     </Container>

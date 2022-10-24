@@ -16,7 +16,7 @@ import Admin from './pages/Admin/Admin';
 import { ToastContainer } from 'react-toastify';
 import AddPatients from './pages/AddPatients/AddPatients';
 import ButtonNav from './components/ButtonNavs/ButtonNav';
-
+import UnknownPage from './pages/UnknownPage';
 
 function App() {
   return (
@@ -32,6 +32,7 @@ function App() {
               <Route path='/events' element={<Events/>}/>
               <Route path='/about' element={<Aboutus/>}/>
               <Route path='/admin/door' element={<Admin/>}/>
+              <Route path='/*' element={<UnknownPage/>}/>
               <Route path='/ourpatients/edit/:id' element={<PrivateRoute/>}>
                 <Route path='/ourpatients/edit/:id' element={<EditPatient/>}/>
               </Route>
@@ -49,9 +50,3 @@ function App() {
 }
 
 export default App;
-
-
-//error handling if possible
-//change the favicon if possible
-//need to make the padination arrows align properly
-//admin logout button goes to left in mobile mode

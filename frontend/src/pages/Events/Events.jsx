@@ -5,6 +5,7 @@ import {useState,useEffect,useContext} from 'react'
 import NavContext from '../../context/NavContext/navContext'
 import {useNavigate} from 'react-router-dom'
 import controller from './eventsController'
+import { toast } from 'react-toastify'
 
 function Events() {
 
@@ -38,7 +39,8 @@ function Events() {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    controller.addMail(formData).then(data=>setShowModal(true));
+    controller.addMail(formData).then(data=>setShowModal(true))
+    .catch(err=>toast.warning('Something went wrong here',{position:toast.POSITION.BOTTOM_RIGHT}));
   };
 
   const handleClose=()=>{

@@ -4,21 +4,23 @@
     border-radius:10px;
     margin-top:1rem;
     position:relative;
+    height:22rem;
 }
 .carousal-container .main-area{
     width:100%;
+    height:100%;
 }
 
 .carousal-container .right-arrow{
     position:absolute;
-    top:43%;
-    right:1rem;
+    top:42%;
+    right:0rem;
 }
 
 .carousal-container .left-arrow{
     position:absolute;
-    top:43%;
-    left:1rem;
+    top:42%;
+    left:0rem;
 }
 
 .carousal-container .right-arrow,
@@ -79,7 +81,10 @@
     .patient-data-area{
         grid-template-columns: auto auto;
         gap:10px;
-        margin-left:3rem;
+        padding-left:8%;
+        width:80%;
+        height:100%;
+        margin:0 auto;
     }
     .carousal-container .right-arrow,
     .carousal-container .left-arrow{
@@ -96,6 +101,7 @@
     /* patient card responsive styles below */
     .card-container{
         width:10rem;
+        height:11.5rem;
     }
     .patient-image{
         height:4.5rem;

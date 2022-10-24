@@ -18,6 +18,11 @@
     display:block;
 }
 
+.admin-form .logout-btn{
+    display:block;
+    margin:0 auto;
+}
+
 @media screen and (min-width:992px){
     .admin-container{
         width:30%;
