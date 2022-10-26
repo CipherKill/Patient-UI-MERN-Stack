@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a27cb7e.css",
+    "main.js": "/static/js/main.e7fddc52.js",
+    "static/media/carousel1.jpg": "/static/media/carousel1.f1478ffe4dfe7f1f16c5.jpg",
+    "static/media/placeholder-user.jpg": "/static/media/placeholder-user.157f088b56f86d22066e.jpg",
+    "static/media/carousel2.jpg": "/static/media/carousel2.2b9bbe9bead9a82b3c2f.jpg",
+    "static/media/loading.gif": "/static/media/loading.94d9a1c444adad1b5834.gif",
+    "static/media/doctor-stethoscope.jpg": "/static/media/doctor-stethoscope.78e418e9126c6b54b9ad.jpg",
+    "static/media/carousel4.jpg": "/static/media/carousel4.838bf35efc1326a9d0e5.jpg",
+    "static/media/carousel3.jpg": "/static/media/carousel3.6582e8d5ad2d958ff073.jpg",
+    "static/media/background-image.jpg": "/static/media/background-image.aaca3e50b9bd380d4a6a.jpg",
+    "index.html": "/index.html",
+    "main.0a27cb7e.css.map": "/static/css/main.0a27cb7e.css.map",
+    "main.e7fddc52.js.map": "/static/js/main.e7fddc52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a27cb7e.css",
+    "static/js/main.e7fddc52.js"
+  ]
+}
