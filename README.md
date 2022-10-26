@@ -11,3 +11,5 @@ Node: Do this in the root directory
 | `npm start` | Run only frontend (ReactJS) |
 **Build production code for frontend:**
 | `npm run build` | Run from frontend folder. A new folder named 'public' will appear in the root directory. |
+
+### Note: Public folder for frontend is also pushed here.
